@@ -1,0 +1,22 @@
+package algo_project;
+import java.awt.*;
+import javax.swing.*;
+
+public class Main {
+	
+	public static void main(String[] args){
+		
+		int sceneWidth = 800;
+		int sceneHeight = 800;
+		
+		int N = 10;
+		Cirlce[] circles = new Circle(N);
+		
+		//将GUI创建窗口放入新的线程（java的事件分发线程）
+		EventQueue.invokeLater(() -> {
+			AlgoFrame frame = new AlgoFrame("Welcome", 500, 500);
+			//AlgoFrame frame = new AlgoFrame("Welcome");
+		});
+		
+	}
+}

@@ -1,0 +1,9 @@
+package algo_project;
+
+public class AlgoVisHelper {
+	
+	private AlgoVisHelper()
+	{
+		public static 
+	}
+}

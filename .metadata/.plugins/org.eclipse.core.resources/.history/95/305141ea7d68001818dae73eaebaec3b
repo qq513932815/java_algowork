@@ -1,0 +1,16 @@
+package algo_project;
+import java.awt.*;
+import javax.swing.*;
+
+public class Main {
+	
+	public static void main(String[] args){
+		
+		int sceneWidth = 800;
+		int sceneHeight = 800;
+		int N = 10;
+		
+		AlogoVisualizer visualizer = new AlogoVisualizer(sceneWidth, sceneHeight, N);
+		
+	}
+}

@@ -1,0 +1,15 @@
+package algo_project;
+import java.awt.*;
+import javax.swing.*;
+
+public class Main {
+	
+	public static void main(String[] args){
+		
+		//将GUI创建窗口放入新的线程（java的事件分发线程）
+		EventQueue.invokeLater(() -> {
+			AlgoFrame frame = new AlgoFrame("Welcome", 500, 500);
+		});
+		
+	}
+}

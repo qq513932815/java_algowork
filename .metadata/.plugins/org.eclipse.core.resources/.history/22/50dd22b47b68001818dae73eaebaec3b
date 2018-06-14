@@ -1,0 +1,9 @@
+package algo_project;
+
+public class AlogoVisualizer {
+
+	private Circle[] circles;
+	private AlgoFrame frame;
+	
+	
+}

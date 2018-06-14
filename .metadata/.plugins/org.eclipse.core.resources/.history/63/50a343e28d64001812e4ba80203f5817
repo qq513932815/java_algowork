@@ -1,0 +1,15 @@
+package algo_project;
+
+import java.awt.*;
+
+public class AlgoVisHelper {
+	
+	private AlgoVisHelper(){}
+	
+	public static void setStrokeWidth(Graphics2D g2d, int w)
+	{
+		int StrokeWidth = 10;
+		g2d.setStroke(new BasicStroke(StrokeWidth, BasicStroke.CAP_ROUND));
+	}
+	
+}

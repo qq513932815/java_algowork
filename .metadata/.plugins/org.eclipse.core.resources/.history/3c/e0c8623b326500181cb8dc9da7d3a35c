@@ -1,0 +1,6 @@
+package algo_project;
+
+public class Circle {
+	
+	public int x, y;
+}

@@ -1,0 +1,62 @@
+package algo_project;
+
+import java.awt.*;
+import java.awt.geom.Ellipse2D;
+
+import javax.swing.*;
+
+public class AlgoFrame extends JFrame {
+	
+	private int CanvasWidth;
+	private int CanvasHeight;
+	public AlgoFrame(String title, int CanvasWidth, int CanvasHeight)
+	{
+		super(title);
+		
+		this.CanvasWidth = CanvasWidth;
+		this.CanvasHeight = CanvasHeight;
+		
+		AlgoCanvas Canvas = new AlgoCanvas();
+		setContentPane(Canvas);
+		pack();//根据加载进窗口的内容重新整理布局
+		
+		this.setResizable(false);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		this.setVisible(true);
+	}
+	
+	public AlgoFrame(String title)
+	{
+		this(title, 1024, 768);
+	}
+	
+	public int getCanvasWidth(){return CanvasWidth;}
+	public int getCanvasHeight(){return CanvasHeight;}
+	
+	private class AlgoCanvas extends JPanel
+	{
+		@Override
+		public void paintComponent(Graphics g)
+		{
+			super.paintComponent(g);
+			Graphics2D g2d = (Graphics2D)g;
+			int StrokeWidth = 10;
+			g2d.setStroke(new BasicStroke());
+			
+			g2d.setColor(Color.BLUE);
+			Ellipse2D circle = new Ellipse2D.Double(75, 75, 350, 350);
+			g2d.draw(circle);
+			
+			g2d.setColor(Color.RED);
+			Ellipse2D circle2 = new Ellipse2D.Double(100, 100, 300, 300);
+			g2d.fill(circle2);
+		}
+		
+		@Override
+		public Dimension getPreferredSize()
+		{
+			return new Dimension(CanvasWidth, CanvasHeight);
+		}
+	}
+}
